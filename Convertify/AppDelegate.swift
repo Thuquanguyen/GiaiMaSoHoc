@@ -12,36 +12,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     public var userID:String?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-        if Settings.PUSH_ENABLED {
-            let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: false]
-
-             OneSignal.initWithLaunchOptions(launchOptions,
-             appId: "75755d0b-56eb-4c5f-b713-22367ac3dad2",
-             handleNotificationAction: {(result) in
-                 let payload = result?.notification.payload
-                 if let additionalData = payload?.additionalData{
-                     UserDefaults.standard.set(additionalData["url"], forKey: "launchURL")
-                     
-                     DispatchQueue.main.async {
-//                         let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeController")
-//                         self.window?.rootViewController = vc
-                        self.makeMainTabbar()
-                     }
-                 }
-                 
-             },
-             settings: onesignalInitSettings)
-
-             OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
-            
-             // Recommend moving the below line to prompt for push after informing the user about
-             //   how your app will use them.
-             OneSignal.promptForPushNotifications(userResponse: { accepted in
-             print("User accepted notifications: \(accepted)")
-                 UserDefaults.standard.set(accepted, forKey: "isAllowed")
-             })
-        }
         self.makeMainTabbar()
         return true
     }

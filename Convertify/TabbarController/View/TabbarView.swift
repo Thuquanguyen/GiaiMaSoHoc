@@ -13,19 +13,17 @@ class TabbarView: UIView {
     // MARK: - Outlets
     @IBOutlet var label0: UILabel!
     @IBOutlet var label1: UILabel!
-    @IBOutlet var label2: UILabel!
     @IBOutlet var label3: UILabel!
     @IBOutlet var label4: UILabel!
     @IBOutlet var button0: UIButton!
     @IBOutlet var button1: UIButton!
-    @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     @IBOutlet var button4: UIButton!
     
     // MARK: - Properties
     var listButton: [UIButton] = []
     var listLabel: [UILabel] = []
-    var listTitle: [String] = ["DIỄN ĐÀN", "KUDV", "KQXS", "YOUTOBE", "THA"]
+    var listTitle: [String] = ["DIỄN ĐÀN", "KUDV", "YOUTOBE", "THA"]
     private let highlightColor = UIColor.white
     private let normalColor = UIColor.gray
     private let font = UIFont(name: "Roboto-Bold", size: 8)
@@ -49,8 +47,8 @@ class TabbarView: UIView {
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.addSubview(view)
-        self.listButton = [button0,button1,button2,button3,button4]
-        self.listLabel = [label0,label1,label2,label3,label4]
+        self.listButton = [button0,button1,button3,button4]
+        self.listLabel = [label0,label1,label3,label4]
         view.backgroundColor = UIColor.clear
         
         //Set Shadow

@@ -38,21 +38,15 @@ class TabbarVC: BaseVC {
         return nav
     }()
     
-    lazy var vc3: UIViewController = {
-        let vc = KQSXVC()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.navigationBar.isHidden = true
-        return nav
-    }()
     
-    lazy var vc4: UIViewController = {
+    lazy var vc3: UIViewController = {
         let vc = YoutubeVC()
         let nav = UINavigationController(rootViewController: vc)
         nav.navigationBar.isHidden = true
         return nav
     }()
     
-    lazy var vc5: UIViewController = {
+    lazy var vc4: UIViewController = {
         let vc = THAVC()
         let nav = UINavigationController(rootViewController: vc)
         nav.navigationBar.isHidden = true
@@ -73,7 +67,7 @@ class TabbarVC: BaseVC {
     }
 
     private func setup() {
-        subScreenList = [vc1, vc2, vc3, vc4, vc5]
+        subScreenList = [vc1, vc2, vc3, vc4]
         
         self.setSubView(index: currentIndexSelected)
         tabbarView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -108,17 +102,14 @@ class TabbarVC: BaseVC {
     }
     
     @IBAction func actionForward(_ sender: Any) {
-        print("kdldlamfdskmflds : \(currentIndexSelected)")
         switch currentIndexSelected {
         case 0:
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "forward1"), object: nil)
         case 1:
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "forward2"), object: nil)
         case 2:
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "forward3"), object: nil)
-        case 3:
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "forward4"), object: nil)
-        case 4:
+        case 3:
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "forward5"), object: nil)
         default:
             break
@@ -126,17 +117,14 @@ class TabbarVC: BaseVC {
     }
     
     @IBAction func actionBack(_ sender: Any) {
-        print("kdldlamfdskmflds : \(currentIndexSelected)")
         switch currentIndexSelected {
         case 0:
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "back1"), object: nil)
         case 1:
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "back2"), object: nil)
         case 2:
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "back3"), object: nil)
-        case 3:
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "back4"), object: nil)
-        case 4:
+        case 3:
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "back5"), object: nil)
         default:
             break

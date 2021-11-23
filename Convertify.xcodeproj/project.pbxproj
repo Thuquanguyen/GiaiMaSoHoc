@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18316CF524CD3FA900E23B62 /* QrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18316CF424CD3FA900E23B62 /* QrController.swift */; };
-		1866D20526232C4B00C7A3C7 /* WinningNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866D20326232C4B00C7A3C7 /* WinningNumberVC.swift */; };
-		1866D20626232C4B00C7A3C7 /* WinningNumberVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1866D20426232C4B00C7A3C7 /* WinningNumberVC.xib */; };
 		1866D20B26232D8E00C7A3C7 /* KQSXVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866D20926232D8E00C7A3C7 /* KQSXVC.swift */; };
 		1866D20C26232D8E00C7A3C7 /* KQSXVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1866D20A26232D8E00C7A3C7 /* KQSXVC.xib */; };
 		1866D21226232F2A00C7A3C7 /* KUVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866D21026232F2A00C7A3C7 /* KUVC.swift */; };
@@ -43,14 +40,12 @@
 		1885C53F24DC1C5B00915D14 /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885C53E24DC1C5B00915D14 /* MenuOptionCell.swift */; };
 		1885C54324DC1D5600915D14 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885C54224DC1D5600915D14 /* Extensions.swift */; };
 		1888874E24DD5A6F00A892C7 /* GlobalFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888874D24DD5A6F00A892C7 /* GlobalFuncs.swift */; };
-		188D11E6235438DF00724124 /* Website in Resources */ = {isa = PBXBuildFile; fileRef = 188D11E5235438DF00724124 /* Website */; };
 		1890814B234C46B60062A7BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890814A234C46B60062A7BB /* AppDelegate.swift */; };
 		1890814F234C46B60062A7BB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890814E234C46B60062A7BB /* HomeController.swift */; };
 		18908152234C46B60062A7BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18908150234C46B60062A7BB /* Main.storyboard */; };
 		18908157234C46B70062A7BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18908155234C46B70062A7BB /* LaunchScreen.storyboard */; };
 		1890815F234C5C5D0062A7BB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890815E234C5C5D0062A7BB /* Settings.swift */; };
 		189087A324DFC671007E241D /* AddGifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189087A224DFC671007E241D /* AddGifs.swift */; };
-		189087A924DFCE2B007E241D /* animatedText.gif in Resources */ = {isa = PBXBuildFile; fileRef = 189087A824DFCE2B007E241D /* animatedText.gif */; };
 		189B86BB24F0998C001B6D32 /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B869824F0997E001B6D32 /* URLEncodedFormEncoder.swift */; };
 		189B86BC24F0998C001B6D32 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B869924F0997F001B6D32 /* RetryPolicy.swift */; };
 		189B86BD24F0998C001B6D32 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B869A24F0997F001B6D32 /* AlamofireExtended.swift */; };
@@ -92,8 +87,6 @@
 		18E02C4A24B854580046EC6E /* ConnectionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E02C4624B854580046EC6E /* ConnectionCheck.swift */; };
 		18EC1A1D234F02360089DC31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EC1A1C234F02360089DC31 /* Assets.xcassets */; };
 		18F7DC8924E8B17D00F30A44 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F7DC8824E8B17D00F30A44 /* StoreKit.framework */; };
-		18FDEDB824B9F1540000C029 /* test.css in Resources */ = {isa = PBXBuildFile; fileRef = 18FDEDB724B9F1540000C029 /* test.css */; };
-		18FDEDBA24B9F1840000C029 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 18FDEDB924B9F1840000C029 /* test.js */; };
 		18FDEDBD24B9F2080000C029 /* InjectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDEDBC24B9F2080000C029 /* InjectUtils.swift */; };
 		7CBABAD82F1F50761B5D3ABC /* Pods_Convertify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7436512C883B36ED736C8D61 /* Pods_Convertify.framework */; };
 /* End PBXBuildFile section */
@@ -113,9 +106,6 @@
 
 /* Begin PBXFileReference section */
 		0EE8F36262A25C8952330E09 /* Pods-Convertify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertify.debug.xcconfig"; path = "Target Support Files/Pods-Convertify/Pods-Convertify.debug.xcconfig"; sourceTree = "<group>"; };
-		18316CF424CD3FA900E23B62 /* QrController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrController.swift; sourceTree = "<group>"; };
-		1866D20326232C4B00C7A3C7 /* WinningNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningNumberVC.swift; sourceTree = "<group>"; };
-		1866D20426232C4B00C7A3C7 /* WinningNumberVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinningNumberVC.xib; sourceTree = "<group>"; };
 		1866D20926232D8E00C7A3C7 /* KQSXVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQSXVC.swift; sourceTree = "<group>"; };
 		1866D20A26232D8E00C7A3C7 /* KQSXVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KQSXVC.xib; sourceTree = "<group>"; };
 		1866D21026232F2A00C7A3C7 /* KUVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KUVC.swift; sourceTree = "<group>"; };
@@ -149,7 +139,6 @@
 		1885C53E24DC1C5B00915D14 /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
 		1885C54224DC1D5600915D14 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1888874D24DD5A6F00A892C7 /* GlobalFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuncs.swift; sourceTree = "<group>"; };
-		188D11E5235438DF00724124 /* Website */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Website; sourceTree = "<group>"; };
 		18908147234C46B60062A7BB /* Convertify App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Convertify App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1890814A234C46B60062A7BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1890814E234C46B60062A7BB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -158,7 +147,6 @@
 		18908158234C46B70062A7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1890815E234C5C5D0062A7BB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		189087A224DFC671007E241D /* AddGifs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGifs.swift; sourceTree = "<group>"; };
-		189087A824DFCE2B007E241D /* animatedText.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animatedText.gif; sourceTree = "<group>"; };
 		18990015235A17F600CDE3FF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		18990017235A17F600CDE3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1899001F235A1CCD00CDE3FF /* Convertify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Convertify.entitlements; sourceTree = "<group>"; };
@@ -203,8 +191,6 @@
 		18E02C4624B854580046EC6E /* ConnectionCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCheck.swift; sourceTree = "<group>"; };
 		18EC1A1C234F02360089DC31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F7DC8824E8B17D00F30A44 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		18FDEDB724B9F1540000C029 /* test.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = test.css; sourceTree = "<group>"; };
-		18FDEDB924B9F1840000C029 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 		18FDEDBC24B9F2080000C029 /* InjectUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectUtils.swift; sourceTree = "<group>"; };
 		60D62DAFA7B4B04212F1F440 /* Pods-PushNotification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotification.release.xcconfig"; path = "Target Support Files/Pods-PushNotification/Pods-PushNotification.release.xcconfig"; sourceTree = "<group>"; };
 		7436512C883B36ED736C8D61 /* Pods_Convertify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convertify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,23 +212,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		185A96E024DFD22800AF4415 /* Gif */ = {
-			isa = PBXGroup;
-			children = (
-				189087A824DFCE2B007E241D /* animatedText.gif */,
-			);
-			path = Gif;
-			sourceTree = "<group>";
-		};
-		1866D20226232C0B00C7A3C7 /* WinningNumber */ = {
-			isa = PBXGroup;
-			children = (
-				1866D20326232C4B00C7A3C7 /* WinningNumberVC.swift */,
-				1866D20426232C4B00C7A3C7 /* WinningNumberVC.xib */,
-			);
-			path = WinningNumber;
-			sourceTree = "<group>";
-		};
 		1866D20826232D7E00C7A3C7 /* KQSX */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,12 +349,9 @@
 				18908162234C5D580062A7BB /* Controllers */,
 				18908163234C5D6A0062A7BB /* View */,
 				1885C53D24DC1C2200915D14 /* Cells */,
-				185A96E024DFD22800AF4415 /* Gif */,
 				18EC1A1C234F02360089DC31 /* Assets.xcassets */,
 				1890814A234C46B60062A7BB /* AppDelegate.swift */,
 				1899001F235A1CCD00CDE3FF /* Convertify.entitlements */,
-				188D11E5235438DF00724124 /* Website */,
-				18FDEDBE24B9F5E60000C029 /* CssJS */,
 				18908158234C46B70062A7BB /* Info.plist */,
 				18FDEDBB24B9F1CA0000C029 /* Utils */,
 				18A711552352DE2300D16753 /* Helper */,
@@ -402,9 +368,7 @@
 				1866D2162623431600C7A3C7 /* YOUTUBE */,
 				1866D20F26232F1B00C7A3C7 /* KU */,
 				1866D20826232D7E00C7A3C7 /* KQSX */,
-				1866D20226232C0B00C7A3C7 /* WinningNumber */,
 				1890814E234C46B60062A7BB /* HomeController.swift */,
-				18316CF424CD3FA900E23B62 /* QrController.swift */,
 				1885C53424DC1AE800915D14 /* ContainerController.swift */,
 				1885C53624DC1B2F00915D14 /* MenuController.swift */,
 			);
@@ -501,15 +465,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		18FDEDBE24B9F5E60000C029 /* CssJS */ = {
-			isa = PBXGroup;
-			children = (
-				18FDEDB924B9F1840000C029 /* test.js */,
-				18FDEDB724B9F1540000C029 /* test.css */,
-			);
-			path = CssJS;
-			sourceTree = "<group>";
-		};
 		1D609A1570C96FC18C1BF72F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,7 +549,6 @@
 			files = (
 				1866D21326232F2A00C7A3C7 /* KUVC.xib in Resources */,
 				1866D21B2623433300C7A3C7 /* THAVC.xib in Resources */,
-				18FDEDBA24B9F1840000C029 /* test.js in Resources */,
 				18908157234C46B70062A7BB /* LaunchScreen.storyboard in Resources */,
 				1866D2212623434900C7A3C7 /* YoutubeVC.xib in Resources */,
 				1866D22726234F0700C7A3C7 /* HomeVC.xib in Resources */,
@@ -603,11 +557,7 @@
 				1866D20C26232D8E00C7A3C7 /* KQSXVC.xib in Resources */,
 				186B1B452620C1D500496217 /* CustomTabbarSubView.xib in Resources */,
 				186B1B432620C1D500496217 /* TabbarView.xib in Resources */,
-				18FDEDB824B9F1540000C029 /* test.css in Resources */,
-				189087A924DFCE2B007E241D /* animatedText.gif in Resources */,
-				1866D20626232C4B00C7A3C7 /* WinningNumberVC.xib in Resources */,
 				18EC1A1D234F02360089DC31 /* Assets.xcassets in Resources */,
-				188D11E6235438DF00724124 /* Website in Resources */,
 				18908152234C46B60062A7BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,7 +641,6 @@
 				189B86C124F0998C001B6D32 /* Protected.swift in Sources */,
 				1885C53924DC1B5800915D14 /* ProtocolsConstants.swift in Sources */,
 				186B1B632620C3F400496217 /* UIViewController+Extension.swift in Sources */,
-				18316CF524CD3FA900E23B62 /* QrController.swift in Sources */,
 				18FDEDBD24B9F2080000C029 /* InjectUtils.swift in Sources */,
 				1885C53724DC1B2F00915D14 /* MenuController.swift in Sources */,
 				1888874E24DD5A6F00A892C7 /* GlobalFuncs.swift in Sources */,
@@ -712,7 +661,6 @@
 				189B86CC24F0998C001B6D32 /* MultipartUpload.swift in Sources */,
 				189B86D824F0998C001B6D32 /* URLConvertible+URLRequestConvertible.swift in Sources */,
 				189B86C324F0998C001B6D32 /* ServerTrustEvaluation.swift in Sources */,
-				1866D20526232C4B00C7A3C7 /* WinningNumberVC.swift in Sources */,
 				186B1B412620C1D500496217 /* CustomTabbarView.swift in Sources */,
 				18E02C4824B854580046EC6E /* FileDownload.swift in Sources */,
 				186B1B552620C29E00496217 /* UIStackView+Extension.swift in Sources */,
@@ -877,7 +825,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Convertify/Convertify.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VM7X7PQ3TE;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -889,7 +837,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = stg.com.wincar.gps;
 				PRODUCT_NAME = "Convertify App";
-				PROVISIONING_PROFILE_SPECIFIER = "Demo WinCar GPS Develop";
+				PROVISIONING_PROFILE_SPECIFIER = "Demo WinCar GPS In House";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -902,7 +850,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Convertify/Convertify.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VM7X7PQ3TE;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -914,7 +862,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = stg.com.wincar.gps;
 				PRODUCT_NAME = "Convertify App";
-				PROVISIONING_PROFILE_SPECIFIER = "Demo WinCar GPS Develop";
+				PROVISIONING_PROFILE_SPECIFIER = "Demo WinCar GPS In House";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

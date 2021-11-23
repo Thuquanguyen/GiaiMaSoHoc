@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zf-Ry-h1N" customClass="TabbarView" customModule="Convertify_App" customModuleProvider="target">
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zf-Ry-h1N" customClass="TabbarView" customModule="Convertify_App" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="762" width="414" height="70"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -102,19 +101,18 @@
                     </constraints>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="2Cd-SN-lE6" secondAttribute="bottom" id="18o-e9-tTV"/>
                 <constraint firstItem="7zf-Ry-h1N" firstAttribute="top" secondItem="KVL-AE-Lz9" secondAttribute="bottom" id="77Q-qa-lrA"/>
                 <constraint firstItem="KVL-AE-Lz9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AMH-sj-B5E"/>
                 <constraint firstItem="2Cd-SN-lE6" firstAttribute="top" secondItem="7zf-Ry-h1N" secondAttribute="bottom" id="Dje-fT-oxm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KVL-AE-Lz9" secondAttribute="trailing" id="IFI-VH-rlQ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7zf-Ry-h1N" secondAttribute="trailing" id="PBZ-aB-2Kn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Cd-SN-lE6" secondAttribute="trailing" id="QHX-xw-rvO"/>
-                <constraint firstItem="KVL-AE-Lz9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bjO-d9-K3R"/>
-                <constraint firstItem="7zf-Ry-h1N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nfz-vs-lgW"/>
-                <constraint firstItem="2Cd-SN-lE6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="r5p-ky-Xp6"/>
+                <constraint firstAttribute="trailing" secondItem="KVL-AE-Lz9" secondAttribute="trailing" id="IFI-VH-rlQ"/>
+                <constraint firstAttribute="trailing" secondItem="7zf-Ry-h1N" secondAttribute="trailing" id="PBZ-aB-2Kn"/>
+                <constraint firstAttribute="trailing" secondItem="2Cd-SN-lE6" secondAttribute="trailing" id="QHX-xw-rvO"/>
+                <constraint firstItem="KVL-AE-Lz9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bjO-d9-K3R"/>
+                <constraint firstItem="7zf-Ry-h1N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nfz-vs-lgW"/>
+                <constraint firstItem="2Cd-SN-lE6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r5p-ky-Xp6"/>
             </constraints>
             <point key="canvasLocation" x="132" y="112"/>
         </view>

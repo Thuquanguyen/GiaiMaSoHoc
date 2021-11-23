@@ -1,2 +1,0 @@
-
-alert("JavaScript is injected!");

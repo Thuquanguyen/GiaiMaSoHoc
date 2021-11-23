@@ -6,7 +6,7 @@ import OneSignal
 import StoreKit
 import GoogleMobileAds
 
-class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UIDocumentInteractionControllerDelegate, UIGestureRecognizerDelegate, QrDelegate {
+class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UIDocumentInteractionControllerDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var viewWebView: UIView!
     
@@ -19,10 +19,7 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
     var backButton: UIButton!
     var tapDetectorView: UIView!
     var navGestureDetector: UIGestureRecognizer!
-    var bannerContainer: UIView!
     
-    var bannerView: GADBannerView!
-    var interstitial: GADInterstitial!
     var clickCount = 0
     
     var webView: WKWebView!
@@ -80,7 +77,6 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
 // MARK: - Init
     override func viewDidLoad() {
         super.viewDidLoad()
-        createAndLoadInterstitial()
         
         findHeights()
         configureNavigationBar()
@@ -125,53 +121,6 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
         view.addSubview(activityIndicator)
         activityIndicator.inCenterOf(superview: view, width: 200, height: 200)
         
-    }
-    
-    private func adBannerSetup(){
-        bannerContainer = UIView()
-        bannerContainer.backgroundColor = .lightGray
-        view.addSubview(bannerContainer)
-        
-        let containerLabel = UILabel()
-        containerLabel.text = "Banner Ad"
-        containerLabel.frame = CGRect(x: view.frame.size.width/2 - 50, y: calculateBannerHeight()/2 - 17, width: 120, height: 35)
-        bannerContainer.addSubview(containerLabel)
-        
-        bannerContainer.translatesAutoresizingMaskIntoConstraints = false
-        bannerContainer.leadingAnchor.constraint(equalTo: webViewContainer.leadingAnchor).isActive = true
-        bannerContainer.topAnchor.constraint(equalTo: webViewContainer.bottomAnchor).isActive = true
-        bannerContainer.trailingAnchor.constraint(equalTo: webViewContainer.trailingAnchor).isActive = true
-        bannerContainer.heightAnchor.constraint(equalToConstant: calculateBannerHeight()).isActive = true
-        
-        print("Banner Height: \(calculateBannerHeight())")
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        bannerView.adUnitID = Settings.ADMOB_BANNER_ID
-        bannerView.rootViewController = self
-        bannerContainer.addSubview(bannerView)
-        bannerView.placeIn(superView: bannerContainer)
-        
-        bannerView.delegate = self
-        bannerView.load(GADRequest())
-    }
-    
-    func createAndLoadInterstitial() {
-        if Settings.INTERSTITIAL_AD {
-            interstitial = GADInterstitial(adUnitID: Settings.ADMOB_INTERSTITIAL_ID)
-            interstitial.delegate = self
-            interstitial.load(GADRequest())
-        }
-    }
-    
-    func showInterstitialAd(){
-        if interstitial.isReady {
-          interstitial.present(fromRootViewController: self)
-        } else {
-          print("Ad wasn't ready")
-        }
-    }
-
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        createAndLoadInterstitial()
     }
     
     // MARK: - Handlers
@@ -233,9 +182,7 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
             }
             
             webViewContainer.frame = CGRect(x: 0, y: yPoint ?? 40, width: view.frame.width, height: view.frame.height - bottomPadding)
-            
-            if Settings.BANNER_AD { adBannerSetup() }
-            
+                        
         }
     }
     
@@ -565,7 +512,6 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
             }
             if navigationAction.navigationType == .linkActivated {
                 webURL = shareURL!.absoluteString
-                setClickCountForInterstitial()
             }
             wasOffline = false
             // if url is scanned with QR
@@ -674,18 +620,6 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
             else{decisionHandler(.allow)}
         }
     }
-    /// end of decideForNavigationPolicy
-    
-    // show interstitial add after specified clicks
-    func setClickCountForInterstitial(){
-        if Settings.INTERSTITIAL_AD {
-            clickCount += 1
-            if clickCount == Settings.INTERSTITIAL_AD_AFTER_CLICKS {
-                showInterstitialAd()
-                clickCount = 0
-            }
-        }
-    }
     
     // check for whitelist external link
     func isLinkWhiteListed(url: String) -> Bool{
@@ -700,7 +634,6 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
     // open app, ratedialog or clear cache
     func openAppOrClearCache(_ urlElements: [String], _ navigationAction: WKNavigationAction, _ decisionHandler: @escaping (WKNavigationActionPolicy) -> Void){
         print("else if enterd")
-        setClickCountForInterstitial()
         
         let url = navigationAction.request.url!
         
@@ -721,13 +654,6 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
         }
         else if urlElements[0] == "disablepush" {
             disablePush()
-            decisionHandler(.cancel)
-        }
-        else if urlElements[0] == "qrcode" {
-            let qrVC = QrController()
-            qrVC.qrDelegate = self
-            qrVC.modalPresentationStyle = .fullScreen
-            present(qrVC, animated: true, completion: nil)
             decisionHandler(.cancel)
         }
         else if urlElements[0] == "inapp" {
@@ -882,9 +808,7 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
     // screen rotation handling
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if size.width > size.height {
-            if bannerContainer != nil {
-                bannerContainer.removeFromSuperview()
-            }
+        
         }
         findHeights()
         
@@ -963,7 +887,7 @@ class HomeController: UITabBarController, WKUIDelegate, WKNavigationDelegate, UI
    
 }
 
-extension HomeController: OSSubscriptionObserver, SKPaymentTransactionObserver, SKProductsRequestDelegate, GADBannerViewDelegate, GADInterstitialDelegate {
+extension HomeController: OSSubscriptionObserver, SKPaymentTransactionObserver, SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         if let product = response.products.first {
             DispatchQueue.main.async {
