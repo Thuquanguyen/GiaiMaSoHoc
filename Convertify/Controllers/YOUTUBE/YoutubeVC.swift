@@ -14,7 +14,7 @@ class YoutubeVC: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-            let url = URL(string: "https://www.youtube.com/channel/UCL87sH_EBg-XZpi4aNLoyLg?fbclid=IwAR1FqWrFN2WQRwCpF4gwIPzJXsZk9Br0gmMHf1SBrL3QM93h8oh9Onk79Z4")
+            let url = URL(string: "https://www.youtube.com/channel/UCm3C_h9dbVU-kLLCcTsZqXw/")
             webView.load(URLRequest(url: url!))
         
         NotificationCenter.default.addObserver(self, selector: #selector(actionForward), name: NSNotification.Name(rawValue: "forward4"), object: nil)

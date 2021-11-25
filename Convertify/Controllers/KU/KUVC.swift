@@ -14,7 +14,7 @@ class KUVC: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-            let url = URL(string: "https://bit.ly/2LdX7x7")
+            let url = URL(string: "http://dv39.psee.ly/Dv39")
             webView.load(URLRequest(url: url!))
         
         NotificationCenter.default.addObserver(self, selector: #selector(actionForward), name: NSNotification.Name(rawValue: "forward2"), object: nil)

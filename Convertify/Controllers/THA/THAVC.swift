@@ -15,7 +15,7 @@ class THAVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             self.view.addSubview(webView)
-            let url = URL(string: "https://bit.ly/3g0SLXb")
+            let url = URL(string: "https://dv599.jss77.net/")
             webView.load(URLRequest(url: url!))
         NotificationCenter.default.addObserver(self, selector: #selector(actionForward), name: NSNotification.Name(rawValue: "forward5"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(actionBack), name: NSNotification.Name(rawValue: "back5"), object: nil)
